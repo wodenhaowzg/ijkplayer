@@ -24,8 +24,8 @@ NDK_TOOLCHAIN_VERSION=4.9
 APP_PIE := false
 
 APP_STL := stlport_static
-
-APP_CFLAGS := -O3 -Wall -pipe \
+# 这里将 -O3 改 -O0，方便调试
+APP_CFLAGS := -O0 -Wall -pipe \
     -ffast-math \
     -fstrict-aliasing -Werror=strict-aliasing \
     -Wno-psabi -Wa,--noexecstack \
